@@ -16,6 +16,9 @@ foreach ($tutores as $t) {
 <h2>Editar Tutor</h2>
 
 <form method="post" action="tutores-editar.php">
+
+<input type="hidden" name="id" value="<?= $tutor_atual['id'] ?>">
+    
     <label>Nome</label>
     <input type="text" name="nome"><br>
     <label>Cpf</label>
@@ -25,4 +28,5 @@ foreach ($tutores as $t) {
     <label>Endereço Completo</label>
     <input type="text" name="endereco"><br>
     <input type="submit" value="Salvar Alterações">
+
     </form>
