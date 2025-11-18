@@ -15,7 +15,10 @@ echo "<a href='tutores-cadastro-form.php'> Novo Tutor </a>";
         Cpf: <?= $post['cpf'] ?> <br>
         Telefone: <?= $post['telefone'] ?> <br>
         Endereco: <?= $post['endereco'] ?> <br>
-        <a href="tutores-excluir.php?id=<?= $tutor['id'] ?>">Excluir
+        
+        <a href="tutores-editar-form.php?id=<?= $tutor['id'] ?>">Editar</a>
+        <a href="tutores-excluir.php?id=<?= $tutor['id'] ?>" style="color: red;">Excluir</a>
     </li>
     <?php endforeach; ?>
+
 </ul>
