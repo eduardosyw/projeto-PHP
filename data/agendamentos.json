@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "usuario_id": 1,
+        "pet_nome": "Rex",
+        "servico": "Banho e Tosa",
+        "data": "2025-11-20",
+        "horario": "14:00",
+        "status": "Confirmado"
+    },
+    {
+        "id": 2,
+        "usuario_id": 1,
+        "pet_nome": "Mimi",
+        "servico": "Consulta Veterinária",
+        "data": "2025-11-22",
+        "horario": "10:30",
+        "status": "Pendente"
+    },
+    {
+        "id": 3,
+        "usuario_id": 1,
+        "pet_nome": "Thor",
+        "servico": "Vacinação",
+        "data": "2025-11-25",
+        "horario": "16:00",
+        "status": "Confirmado"
+    },
+    {
+        "id": 4,
+        "usuario_id": 2,
+        "pet_nome": "Bolt",
+        "servico": "Banho e Tosa",
+        "data": "2025-11-21",
+        "horario": "09:00",
+        "status": "Confirmado"
+    },
+    {
+        "id": 5,
+        "usuario_id": 2,
+        "pet_nome": "Max",
+        "servico": "Corte de Unhas",
+        "data": "2025-11-23",
+        "horario": "15:30",
+        "status": "Pendente"
+    },
+    {
+        "id": 6,
+        "usuario_id": 2,
+        "pet_nome": "Duke",
+        "servico": "Consulta Veterinária",
+        "data": "2025-11-26",
+        "horario": "11:00",
+        "status": "Confirmado"
+    },
+    {
+        "id": 7,
+        "usuario_id": 1,
+        "pet_nome": "Loki",
+        "servico": "Banho e Tosa",
+        "data": "2025-11-13",
+        "horario": "22:22",
+        "status": "Pendente"
+    }
+]
