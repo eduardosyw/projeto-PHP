@@ -17,6 +17,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: Arial, sans-serif;
+    background-color: #FFFAF5;
 }
 
 ul {
@@ -42,13 +43,36 @@ header {
     align-items: center;
     padding: 20px;
     width: 100%;
-    background-color: #f8f8f8;
+    background: linear-gradient(135deg, #FFB366 0%, #FFC77D 100%);
+    box-shadow: 0 2px 8px rgba(255, 179, 102, 0.3);
+}
+
+.esquerda a {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .direita ul {
     display: flex;
     flex-direction: row;
     gap: 15px;
+}
+
+.direita a {
+    color: white;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.direita a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
 }
 
 /* ========================================
@@ -86,6 +110,7 @@ main {
 
 .hero-content h1 {
     font-size: 2.5rem;
+    color: #E67E22;
 }
 
 .hero-content p {
@@ -98,15 +123,19 @@ main {
     font-size: 1rem;
     cursor: pointer;
     align-self: flex-start;
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #FFB366 0%, #FFC77D 100%);
     color: white;
     border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(255, 179, 102, 0.4);
 }
 
 .hero-content .button:hover {
-    background-color: #45a049;
+    background: linear-gradient(135deg, #FF9F4D 0%, #FFB366 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 159, 77, 0.5);
 }
 
 .hero-image {
@@ -129,13 +158,14 @@ main {
 /* Info Section - Cards */
 .info {
     padding: 40px 0;
-    background-color: #f8f8f8;
+    background: linear-gradient(180deg, #FFFAF5 0%, #FFE8D1 100%);
 }
 
 .info h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2rem;
+    color: #E67E22;
 }
 
 .info__cards {
@@ -154,10 +184,17 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #e0e0e0;
-    border: 2px dashed #999;
-    border-radius: 8px;
+    background-color: white;
+    border: 3px solid #FFC77D;
+    border-radius: 12px;
     padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.card figure:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(255, 179, 102, 0.3);
+    border-color: #FFB366;
 }
 
 .card img {
@@ -165,13 +202,14 @@ main {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
-    background-color: #f5f5f5;
+    background-color: #FFFAF5;
 }
 
 .card figcaption {
     text-align: center;
     font-size: 1rem;
-    color: #333;
+    color: #E67E22;
+    font-weight: bold;
 }
 
 /* ========================================
@@ -198,18 +236,20 @@ main {
 }
 
 .card-header {
-    background-color: #f8f8f8;
+    background: linear-gradient(135deg, #FFC77D 0%, #FFD699 100%);
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #FFB366;
 }
 
 .card-header h3 {
     margin: 0;
     font-size: 1.3rem;
-    color: #333;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
 }
 
 .status {
@@ -225,12 +265,12 @@ main {
 }
 
 .status-pendente {
-    background-color: #FFC107;
-    color: #333;
+    background-color: #FFA726;
+    color: white;
 }
 
 .status-cancelado {
-    background-color: #f44336;
+    background-color: #EF5350;
     color: white;
 }
 
@@ -250,10 +290,10 @@ main {
 
 .card-footer {
     padding: 15px;
-    background-color: #f8f8f8;
+    background-color: #FFFAF5;
     display: flex;
     gap: 10px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #FFE8D1;
 }
 
 .btn-editar,
@@ -261,29 +301,35 @@ main {
     flex: 1;
     padding: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn-editar {
-    background-color: #2196F3;
+    background: linear-gradient(135deg, #FFC77D 0%, #FFD699 100%);
     color: white;
+    box-shadow: 0 2px 8px rgba(255, 199, 125, 0.4);
 }
 
 .btn-editar:hover {
-    background-color: #1976D2;
+    background: linear-gradient(135deg, #FFB366 0%, #FFC77D 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 179, 102, 0.5);
 }
 
 .btn-excluir {
-    background-color: #f44336;
+    background: linear-gradient(135deg, #EF5350 0%, #F44336 100%);
     color: white;
+    box-shadow: 0 2px 8px rgba(239, 83, 80, 0.4);
 }
 
 .btn-excluir:hover {
-    background-color: #d32f2f;
+    background: linear-gradient(135deg, #E53935 0%, #EF5350 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.5);
 }
 
 /* ========================================
@@ -292,13 +338,15 @@ main {
 .demo-login-box {
     margin-top: 20px;
     padding: 15px;
-    background-color: #fff3cd;
-    border-radius: 5px;
-    border: 1px solid #ffc107;
+    background: linear-gradient(135deg, #FFF4E6 0%, #FFE4C4 100%);
+    border-radius: 8px;
+    border: 2px solid #FFC77D;
 }
 
 .demo-status {
     margin: 0 0 10px 0;
+    color: #E67E22;
+    font-weight: bold;
 }
 
 .demo-form {
@@ -308,7 +356,7 @@ main {
 .demo-info {
     margin: 10px 0 0 0;
     font-size: 0.85rem;
-    color: #856404;
+    color: #E67E22;
 }
 
 .button-small {
@@ -318,9 +366,10 @@ main {
 
 .empty-message {
     text-align: center;
-    color: #999;
+    color: #FFB366;
     padding: 40px;
     font-size: 1.1rem;
+    font-weight: 500;
 }
 
 /* 
@@ -334,8 +383,9 @@ main {
     margin: 0 auto;
     background: white;
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 154, 60, 0.2);
+    border: 2px solid #FFE8D6;
 }
 
 .form-group {
@@ -346,7 +396,7 @@ main {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #333;
+    color: #E67E22;
     font-size: 1rem;
 }
 
@@ -354,19 +404,20 @@ main {
 .form-group select {
     width: 100%;
     padding: 14px 16px;
-    border: 2px solid #e0e0e0;
-    border-radius: 4px;
+    border: 2px solid #FFE8D1;
+    border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
     font-family: Arial, sans-serif;
-    background-color: #fff;
+    background-color: #FFFAF5;
 }
 
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+    border-color: #FFB366;
+    box-shadow: 0 0 0 3px rgba(255, 179, 102, 0.15);
+    background-color: white;
 }
 
 .form-group select {
@@ -387,31 +438,44 @@ main {
     font-size: 1rem;
     font-weight: bold;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
 }
 
-.button-secondary {
-    background-color: #6c757d;
+.form-actions .button {
+    background: linear-gradient(135deg, #FFB366 0%, #FFC77D 100%);
     color: white;
+    box-shadow: 0 4px 12px rgba(255, 179, 102, 0.4);
+}
+
+.form-actions .button:hover {
+    background: linear-gradient(135deg, #FF9F4D 0%, #FFB366 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 159, 77, 0.5);
+}
+
+.button-secondary {
+    background-color: #9E9E9E;
+    color: white;
+    box-shadow: 0 4px 12px rgba(158, 158, 158, 0.3);
 }
 
 .button-secondary:hover {
-    background-color: #5a6268;
+    background-color: #757575;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 16px rgba(117, 117, 117, 0.4);
 }
 
 .sucesso-message {
-    background-color: #d4edda;
+    background: linear-gradient(135deg, #D4EDDA 0%, #C3E6CB 100%);
     color: #155724;
     padding: 15px 20px;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-bottom: 20px;
-    border: 1px solid #c3e6cb;
+    border: 2px solid #4CAF50;
     font-weight: bold;
 }
 
@@ -420,16 +484,19 @@ main {
    ======================================== */
 footer {
     width: 100%;
-    background-color: #333;
+    background: linear-gradient(135deg, #E67E22 0%, #FFB366 100%);
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: auto;
+    box-shadow: 0 -2px 8px rgba(230, 126, 34, 0.3);
 }
 
 footer p {
     margin: 0;
     font-size: 0.9rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
 }
 
 /* ========================================

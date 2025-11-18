@@ -31,7 +31,7 @@ include_once 'header.php';
                 </div>
                 <div class="hero-image">
                     <img 
-                        src="https://via.placeholder.com/400x300" 
+                        src="https://media.istockphoto.com/id/1445781293/pt/foto/cat-and-dog-looking-at-the-camera-in-front-of-food-shelves-in-a-pet-store-the-background-is.jpg?s=612x612&w=0&k=20&c=Suw7Y87mi0vmGN_Ou8PWQLI0nE3mc-Yl6ASAvhv4Wrs=" 
                         alt="Imagem de destaque"
                     />
                 </div>
@@ -45,37 +45,37 @@ include_once 'header.php';
                     <li class="card">
                         <figure>
                             <img
-                                src="https://via.placeholder.com/300x200"
-                                alt="Placeholder 1"
+                                src="https://img.freepik.com/fotos-gratis/cao-adoravel-com-dono-na-pet-shop_23-2148872556.jpg?semt=ais_incoming&w=740&q=80"
+                                alt="Imagem Produtos"
                             />
-                            <figcaption>placeholder</figcaption>
+                            <figcaption>Produtos</figcaption>
                         </figure>
                     </li>
                     <li class="card">
                         <figure>
                             <img
-                                src="https://via.placeholder.com/300x200"
-                                alt="Placeholder 2"
+                                src="https://media.gettyimages.com/id/639321736/pt/foto/this-one-loves-the-groomers.jpg?s=612x612&w=gi&k=20&c=BZiFUgzTaHgQRyshERYUbfGZ5GVh8g1MXsaIXBHmcHQ="
+                                alt="Atendimento"
                             />
-                            <figcaption>placeholder</figcaption>
+                            <figcaption>Atendimento</figcaption>
                         </figure>
                     </li>
                     <li class="card">
                         <figure>
                             <img
-                                src="https://via.placeholder.com/300x200"
-                                alt="Placeholder 3"
+                                src="https://media.istockphoto.com/id/1308719194/pt/foto/golden-retriver-dog-taking-a-shower-in-a-pet-grooming-salon.jpg?s=612x612&w=0&k=20&c=t6uhoqR_lEEQX0eIJbwQd9q_UrJccy_KILJ7xhKFdhw="
+                                alt="Banho"
                             />
-                            <figcaption>placeholder</figcaption>
+                            <figcaption>Banho</figcaption>
                         </figure>
                     </li>
                     <li class="card">
                         <figure>
                             <img
-                                src="https://via.placeholder.com/300x200"
-                                alt="Placeholder 4"
+                                src="https://media.istockphoto.com/id/1041030024/pt/foto/grooming-salon.jpg?s=612x612&w=0&k=20&c=Z5BUDnVf434GVQbDDfgj1n_dnZCVBySXNyVl9PQeGvE="
+                                alt="Tosa"
                             />
-                            <figcaption>placeholder</figcaption>
+                            <figcaption>Tosa</figcaption>
                         </figure>
                     </li>
                 </ul>
