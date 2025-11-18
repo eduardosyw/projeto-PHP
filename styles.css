@@ -480,6 +480,55 @@ main {
 }
 
 /* ========================================
+   DELETAR AGENDAMENTO
+   ======================================== */
+.delete-confirmation {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.agendamento-details {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 179, 102, 0.2);
+    border: 2px solid #FFE8D1;
+    margin-bottom: 30px;
+}
+
+.agendamento-details h3 {
+    color: #E67E22;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.agendamento-details p {
+    margin: 12px 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.agendamento-details strong {
+    color: #333;
+}
+
+.delete-form {
+    text-align: center;
+}
+
+.button-danger {
+    background: linear-gradient(135deg, #EF5350 0%, #F44336 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(239, 83, 80, 0.4);
+}
+
+.button-danger:hover {
+    background: linear-gradient(135deg, #E53935 0%, #EF5350 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(229, 57, 53, 0.5);
+}
+
+/* ========================================
    FOOTER
    ======================================== */
 footer {

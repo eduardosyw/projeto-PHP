@@ -1,9 +1,6 @@
 <div class="agendamento-card">
     <div class="card-header">
         <h3><?php echo sanitize_output($agendamento['pet_nome']); ?></h3>
-        <span class="status status-<?php echo strtolower($agendamento['status']); ?>">
-            <?php echo sanitize_output($agendamento['status']); ?>
-        </span>
     </div>
     <div class="card-body">
         <p><strong>Serviço:</strong> <?php echo sanitize_output($agendamento['servico']); ?></p>

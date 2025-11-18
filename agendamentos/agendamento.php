@@ -18,10 +18,21 @@ include_once '../header.php';
 
                 <?php if(isset($_GET['sucesso'])): ?>
                     <div class="sucesso-message">
-                        Agendamento Criado com Sucesso!
+                        Agendamento criado com sucesso!
                     </div>
-                <?php endif;?>
+                <?php endif; ?>
 
+                <?php if(isset($_GET['deletado'])): ?>
+                    <div class="sucesso-message" style="background: linear-gradient(135deg, #FFEBEE 0%, #FFCDD2 100%); color: #C62828; border-color: #EF5350;">
+                        Agendamento deletado com sucesso!
+                    </div>
+                <?php endif; ?>
+
+                <?php if(isset($_GET['edit'])): ?>
+                    <div class="sucesso-message" style="background: linear-gradient(135deg, #00d9ffff 0%, #0059ffff 100%); color: #ffffffff; border-color: #f39e00ff;">
+                        Agendamento editado com sucesso!
+                    </div>
+                <?php endif; ?>
 
                 <?php include 'includes/demo_login.php'; ?>
             </div>
@@ -53,9 +64,7 @@ function editarAgendamento(id) {
 }
 
 function excluirAgendamento(id) {
-    if (confirm('Tem certeza que deseja excluir este agendamento?')) {
-        window.location.href = 'deletar.php?id=' + id;
-    }
+    window.location.href = 'deletar.php?id=' + id;
 }
 </script>
 

@@ -27,7 +27,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $agendamentos = [];
     }
 
-    $novo_id = count($agendamentos) + 1;
+    if (empty($agendamentos)) {
+        $novo_id = 1;
+    } else {
+        $maior_id = 0;
+        foreach ($agendamentos as $a) {
+            if ($a['id'] > $maior_id) {
+                $maior_id = $a['id'];
+            }
+        }
+    }
+    $novo_id = $maior_id + 1;
+
+    
     $novo_agendamento = [
         'id' => $novo_id,
         'usuario_id' => $usuario_id,
