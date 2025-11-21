@@ -1,0 +1,23 @@
+<main class="main-login">
+    <section class="info">
+        <div class="container">
+            <h2>Cadastrar</h2>
+            <form action="acoes-usuarios.php" method="POST"  class="form-agendamento">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" name="criar"  class="button">Cadastrar</button>
+                </div>
+                <div class="form-actions">
+                    <a href="./" class="link-login">Login</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>

@@ -17,6 +17,14 @@
                     <li><a href="<?php echo $base_path ?? ''; ?>agendamentos/agendamento.php">Agendamentos</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Contato</a></li>
+                    <li>
+                        <?php if(empty($_SESSION['usuario_id'])){?>
+                            <a href="<?=$base_path;?>login/">Login</a>
+                        <?php } else { ?>
+                            <a href="<?=$base_path;?>login/logout.php">Sair</a>
+                        <?php } ?>
+                            
+                    </li>
                 </ul>
             </nav>
         </div>
