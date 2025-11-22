@@ -1,7 +1,8 @@
 <main class="main-login">
     <section class="info">
         <div class="container">
-            <h2>Cadastrar</h2>
+            <h2>Cadastrar-se</h2>
+            <?php include_once 'msg.php'; ?>
             <form action="acoes-usuarios.php" method="POST"  class="form-agendamento">
                 <div class="form-group">
                     <label for="email">Email</label>

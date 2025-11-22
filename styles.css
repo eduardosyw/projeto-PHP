@@ -565,3 +565,12 @@ footer p {
 .link-login:hover {
     text-decoration: underline;
 }
+
+.main-login > .info{
+    height: 100vh;
+}
+
+.main-login .sucesso-message {
+    max-width: 700px;
+    margin: 0 auto 20px;
+}

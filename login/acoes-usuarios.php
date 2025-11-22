@@ -18,7 +18,8 @@
 
         foreach($usuarios as $usuario) {
             if($usuario["email"] == $email) {
-                header('Location: form-login.php');
+                // usuario ja cadastrado
+                header('Location: ./?pg=form-login&msg=userExist');
                 exit;
             }
         }
@@ -37,9 +38,10 @@
         $novoConteudo = json_encode($usuarios, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
         if(file_put_contents($arquivo, $novoConteudo)) {
-            header('location: form-login.php');
+            // usuario cadastrado com sucesso
+            header('location: ./?pg=form-login&msg=userCreat');
         } else {
-            echo "Erro ao cadastrar usuario";
+            header('Location: ./?pg=form-cadastro&msg=erro');
         }
     }
     if(isset($_POST['logar'])) {
@@ -59,11 +61,11 @@
                 }
             }
             if(!$acesso) {
-                header('location: form-login.php');
+                header('location: ./?pg=form-login&msg=erroLogar');
             } else {
                 header('Location: ../');
             }
         } else {
-            header("Location: form-cadastro.php");
+            header("Location: ./?pg=form-login&msg=erroLogar");
         }
     }
