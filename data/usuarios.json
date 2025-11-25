@@ -22,5 +22,35 @@
         "email": "robson@gmail.com",
         "senha": "123",
         "tipo": "cliente"
+    },
+    {
+        "id": 5,
+        "email": "allanmagalhaes2010@hotmail.com",
+        "senha": "123",
+        "tipo": "cliente"
+    },
+    {
+        "id": 6,
+        "email": "allan@gmail.com",
+        "senha": "123",
+        "tipo": "cliente"
+    },
+    {
+        "id": 7,
+        "email": "allan2@gmail.com",
+        "senha": "1234",
+        "tipo": "cliente"
+    },
+    {
+        "id": 8,
+        "email": "allan3@gmail.com",
+        "senha": "1234",
+        "tipo": "cliente"
+    },
+    {
+        "id": 9,
+        "email": "allan34@gmail.com",
+        "senha": "1234",
+        "tipo": "cliente"
     }
 ]

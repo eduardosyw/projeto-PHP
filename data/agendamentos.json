@@ -79,5 +79,14 @@
         "data": "2025-11-24",
         "horario": "22:00",
         "status": "Pendente"
+    },
+    {
+        "id": 13,
+        "usuario_id": 5,
+        "pet_nome": "Cachorro1",
+        "servico": "Consulta Veterinária",
+        "data": "2025-11-13",
+        "horario": "22:10",
+        "status": "Pendente"
     }
 ]

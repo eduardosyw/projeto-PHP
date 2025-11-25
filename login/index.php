@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css">
-    <title>login</title>
-</head>
-<body>
-    <?php
+<?php
+require_once '../config/sessao.php';
+$base_path = '../';
+include_once '../header.php';
 
-        if(empty($_SERVER['QUERY_STRING'])) {
-            $principal = 'form-login';
-            include_once "$principal.php";
-        } else {
-            $pg = $_GET['pg'];
-            include_once "$pg.php";
-        }
+if (empty($_SERVER['QUERY_STRING'])) {
+    $principal = 'form-login';
+    include_once "$principal.php";
+} else {
+    $pg = $_GET['pg'];
+    include_once "$pg.php";
+}
 
-    ?>
-</body>
-</html>
+include_once '../footer.php';
+?>

@@ -1,6 +1,6 @@
 <?php
 
-$arquivo_json="tutores.json";
+$arquivo_json = "data/tutores.json";
 
 $id = $_POST['id'];
 $nome = $_POST['nome'];
@@ -11,7 +11,7 @@ $endereco = $_POST['endereco'];
 $json = file_get_contents($arquivo_json);
 $tutores = json_decode($json, true);
 
-foreach ($tutores as $tutor) {
+foreach ($tutores as &$tutor) {
     if ($tutor['id'] == $id) {
         $tutor['nome'] = $nome;
         $tutor['cpf'] = $cpf;
@@ -24,6 +24,6 @@ foreach ($tutores as $tutor) {
 $json_salvar = json_encode($tutores, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 file_put_contents($arquivo_json, $json_salvar);
 
-header("Location: tutores-lista.php");
+header("Location: dados.php");
 
 ?>

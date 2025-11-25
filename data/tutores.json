@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "usuario_id": 9,
+        "nome": "allan",
+        "cpf": "21313987",
+        "telefone": "3291839873",
+        "endereco": "Rua 123"
+    },
+    {
+        "id": 2,
+        "usuario_id": 6,
+        "nome": "Allan Lucena",
+        "cpf": "210931809",
+        "telefone": "3120823098",
+        "endereco": "Rua 123"
+    }
+]

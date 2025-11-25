@@ -1,7 +1,7 @@
 <?php
 
 $id_para_excluir = $_GET['id'];
-$arquivo_json = "tutores.json";
+$arquivo_json = "data/tutores.json";
 
 $json = file_get_contents($arquivo_json);
 $tutores = json_decode($json, true);

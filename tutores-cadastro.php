@@ -1,9 +1,13 @@
 <?php
 
-$arquivo_json = "tutores.json";
+$arquivo_json = "data/tutores.json";
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+    die("Erro: Usuário não logado.");
+}
 
-$nome   = $_POST['nome'];
-$cpf    = $_POST['cpf'];
+$nome = $_POST['nome'];
+$cpf = $_POST['cpf'];
 $telefone = $_POST['telefone'];
 $endereco = $_POST['endereco'];
 
@@ -21,20 +25,20 @@ if (file_exists($arquivo_json)) {
 $novo_id = count($tutores) + 1;
 $novo_tutor = [
     "id" => $novo_id,
+    "usuario_id" => $_SESSION['usuario_id'],
     "nome" => $nome,
     "cpf" => $cpf,
-    "telefone" => $telefone
+    "telefone" => $telefone,
     "endereco" => $endereco
 ];
 
 $tutores[] = $novo_tutor;
 
-$novo_tutor = json_encode($tutores, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+$novo_tutor_json = json_encode($tutores, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
-if (file_put_contents($arquivo_json, $novo_tutor)) {
-    echo "<p>Tutor '$nome' cadastrado com sucesso.</p>";
-    echo "<p><a href='tutores-lista.php'>Listar Tutores</a></p>";
+if (file_put_contents($arquivo_json, $novo_tutor_json)) {
+    header('Location: dados.php');
 } else {
-    echo "<h2>Erro ao enviar o formulário.</h2>";
-    echo "<p><a href='tutores-lista.php'>Listar Tutores</a></p>";
+    header('Location: dados.php?msg=erro');
 }
+?>

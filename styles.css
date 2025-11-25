@@ -567,7 +567,11 @@ footer p {
 }
 
 .main-login > .info{
-    height: 100vh;
+    /* height: 100vh; Removed to fit with header/footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
 }
 
 .main-login .sucesso-message {
