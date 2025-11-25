@@ -2,7 +2,7 @@
 
 Projeto final da disciplina de Programação Web – Unipê
 
-📘 Viaão Geral
+📘 Visão Geral
 
 Este projeto consiste em um sistema de gerenciamento de agendamentos para um Pet Shop, desenvolvido em PHP com foco em organização, usabilidade e fluxo simples de atendimento.
 
