@@ -17,7 +17,7 @@
             <nav>
                 <ul>
                     <li><a href="<?php echo $base_path ?? ''; ?>agendamentos/agendamento.php">Agendamentos</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="quemsomos.php">Quem Somos</a></li>
                     <li><a href="#">Contato</a></li>
                     <li>
                         <?php if (empty($_SESSION['usuario_id'])) { ?>
