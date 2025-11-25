@@ -1,4 +1,4 @@
-🐾 Pet Shop – Sistema de Agendamentos
+🐾 Pet Club – Sistema de Agendamentos
 
 Projeto final da disciplina de Programação Web – Unipê
 
