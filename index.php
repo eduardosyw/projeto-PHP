@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once 'config/sessao.php';
 $base_path = ''; 
 include_once 'header.php'; 
@@ -10,7 +10,7 @@ include_once 'header.php';
                 <div class="hero-content">
                     <h1 id="hero-title">Bem-vindo ao Pet Shop</h1>
                     <p id="hero-text">Mantenha seu pet feliz e saudável!</p>
-                    <button class="button">Cadastre-se</button>
+                    <?php if(empty($_SESSION['usuario_id'])) { ?><button class="button" onclick="window.location.href='login/?pg=form-cadastro'">Cadastre-se</button> <?php } ?>
                     
                     <div style="margin-top: 20px; padding: 15px; background-color: #fff3cd; border-radius: 5px; border: 1px solid #ffc107;">
                         <p style="margin: 0 0 10px 0;">

@@ -52,5 +52,32 @@
         "data": "2025-11-07",
         "horario": "12:32",
         "status": "Pendente"
+    },
+    {
+        "id": 10,
+        "usuario_id": 4,
+        "pet_nome": "Rex",
+        "servico": "Consulta Veterinária",
+        "data": "2025-11-25",
+        "horario": "15:00",
+        "status": "Pendente"
+    },
+    {
+        "id": 11,
+        "usuario_id": 3,
+        "pet_nome": "Azulão",
+        "servico": "Consulta Veterinária",
+        "data": "2025-11-28",
+        "horario": "17:00",
+        "status": "Pendente"
+    },
+    {
+        "id": 12,
+        "usuario_id": 3,
+        "pet_nome": "Azulão",
+        "servico": "Banho e Tosa",
+        "data": "2025-11-24",
+        "horario": "22:00",
+        "status": "Pendente"
     }
 ]

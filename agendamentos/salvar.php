@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         header('Location: agendamento.php?sucesso=1');
         exit;
     } else{
-        echo "Erro ao salvar";
+        echo "Erro ao salvar" . error_get_last()['message'];
     }
 } else {
     echo "Metodo inválido";

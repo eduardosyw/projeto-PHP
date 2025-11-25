@@ -551,3 +551,26 @@ footer p {
 /* ========================================
    FOOTER
    ======================================== */
+
+
+/* ======================================== 
+    LOGIN
+   ======================================== */
+
+.link-login {
+    padding: 5px;
+    color: #E67E22;
+    font-size: 1.2rem;
+}
+.link-login:hover {
+    text-decoration: underline;
+}
+
+.main-login > .info{
+    height: 100vh;
+}
+
+.main-login .sucesso-message {
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
