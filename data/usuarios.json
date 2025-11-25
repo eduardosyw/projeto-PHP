@@ -27,13 +27,13 @@
         "id": 5,
         "email": "allanmagalhaes2010@hotmail.com",
         "senha": "123",
-        "tipo": "cliente"
+        "tipo": "admin"
     },
     {
         "id": 6,
         "email": "allan@gmail.com",
         "senha": "123",
-        "tipo": "cliente"
+        "tipo": "admin"
     },
     {
         "id": 7,

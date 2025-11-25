@@ -11,14 +11,14 @@
 <body>
     <header>
         <div class="esquerda">
-            <a href="<?php echo $base_path ?? ''; ?>index.php">Pet Shop</a>
+            <a href="<?php echo $base_path ?? ''; ?>index.php">Pet Club</a>
         </div>
         <div class="direita">
             <nav>
                 <ul>
                     <li><a href="<?php echo $base_path ?? ''; ?>agendamentos/agendamento.php">Agendamentos</a></li>
-                    <li><a href="quemsomos.php">Quem Somos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="<?= $base_path; ?>quemsomos.php">Quem Somos</a></li>
+                    <li><a href="<?= $base_path; ?>contato.php">Contato</a></li>
                     <li>
                         <?php if (empty($_SESSION['usuario_id'])) { ?>
                             <a href="<?= $base_path; ?>login/">Login</a>

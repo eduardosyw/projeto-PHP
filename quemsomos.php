@@ -12,7 +12,7 @@ include_once 'header.php';
             
             <div class="sobre-nos-texto" style="font-size: 1.1rem; line-height: 1.8; color: #444; text-align: justify; margin-top: 20px;">
                 <p>
-                    Aqui no Petshop, nós sabemos que o seu pet não é "apenas um animal de estimação". 
+                    Aqui no Pet Club, nós sabemos que o seu pet não é "apenas um animal de estimação". 
                     Ele é um membro da família, um companheiro leal e uma fonte inesgotável de alegria. 
                     Foi desse amor incondicional pelos animais que nossa história começou.
                 </p>

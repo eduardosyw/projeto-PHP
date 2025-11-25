@@ -8,7 +8,7 @@ include_once 'header.php';
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 id="hero-title">Bem-vindo ao Pet Shop</h1>
+                <h1 id="hero-title">Bem-vindo ao Pet Club</h1>
                 <p id="hero-text">Mantenha seu pet feliz e saudável!</p>
                 <?php if (empty($_SESSION['usuario_id'])) { ?><button class="button"
                         onclick="window.location.href='login/?pg=form-cadastro'">Cadastre-se</button> <?php } ?>
