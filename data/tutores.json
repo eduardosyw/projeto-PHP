@@ -14,5 +14,21 @@
         "cpf": "210931809",
         "telefone": "3120823098",
         "endereco": "Rua 123"
+    },
+    {
+        "id": 3,
+        "usuario_id": 10,
+        "nome": "Maria Clara",
+        "cpf": "04853215945",
+        "telefone": "69999999999",
+        "endereco": "Rua Jose machado"
+    },
+    {
+        "id": 4,
+        "usuario_id": 11,
+        "nome": "Jose Renato",
+        "cpf": "55555555555",
+        "telefone": "8392114573",
+        "endereco": "Rua jose"
     }
 ]

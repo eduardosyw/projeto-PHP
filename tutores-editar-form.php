@@ -11,7 +11,6 @@ foreach ($tutores as $t) {
         break;
     }
 }
-?>
 
 $base_path = '';
 include_once 'header.php';

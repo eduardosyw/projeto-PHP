@@ -88,5 +88,23 @@
         "data": "2025-11-13",
         "horario": "22:10",
         "status": "Pendente"
+    },
+    {
+        "id": 14,
+        "usuario_id": 10,
+        "pet_nome": "Rex",
+        "servico": "Consulta Veterinária",
+        "data": "2025-12-01",
+        "horario": "15:00",
+        "status": "Pendente"
+    },
+    {
+        "id": 15,
+        "usuario_id": 11,
+        "pet_nome": "Rex",
+        "servico": "Banho e Tosa",
+        "data": "2025-12-05",
+        "horario": "15:00",
+        "status": "Pendente"
     }
 ]
