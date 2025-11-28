@@ -581,6 +581,6 @@ footer p {
 
 #botaoAdmin {
     position: fixed;
-    right: 85%;
-    top: 90%;
+    left: 20px;
+    bottom: 20px;
 }
