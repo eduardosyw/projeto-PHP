@@ -27,7 +27,7 @@
         "id": 5,
         "email": "allanmagalhaes2010@hotmail.com",
         "senha": "123",
-        "tipo": "admin"
+        "tipo": "Cliente"
     },
     {
         "id": 6,
