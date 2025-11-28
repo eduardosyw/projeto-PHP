@@ -10,7 +10,7 @@ include_once 'header.php';
         <div class="container">
             <h2 id="info-title" style="font-size: 2.5rem">Nossa História</h2>
             
-            <div class="sobre-nos-texto" style="font-size: 1.1rem; line-height: 1.8; color: #444; text-align: justify; margin-top: 20px;">
+            <div class="sobre-nos-texto" style="max-width: 700px; font-size: 1.1rem; line-height: 1.8; color: #444; text-align: justify; margin: 20px auto 0;">
                 <p>
                     Aqui no Pet Club, nós sabemos que o seu pet não é "apenas um animal de estimação". 
                     Ele é um membro da família, um companheiro leal e uma fonte inesgotável de alegria. 

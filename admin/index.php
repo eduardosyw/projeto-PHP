@@ -1,6 +1,8 @@
 <?php
 $tutoresLista = file_get_contents('../data/tutores.json');
 $tutores = json_decode($tutoresLista, true);
+
+$usuarios = json_decode(file_get_contents('../data/usuarios.json'), true);
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +69,7 @@ $tutores = json_decode($tutoresLista, true);
         <div class="left-menu">
             <a href="index.php" style="font-weight: bold; background-color: #b8b6b6; padding: 15px 20px; text-decoration: none; color: #333;">Clientes</a>
             <a href="agendamentos.php" style="padding: 15px 20px; text-decoration: none; color: #333;">Agendamentos</a>
-            <a href="../config/logout.php" style="padding: 15px 20px; text-decoration: none; color: #d32f2f; font-weight: bold; margin-top: auto; border-top: 2px solid #b8b6b6;">🚪 Sair</a>
+            <a href="../" style="padding: 15px 20px; text-decoration: none; color: #d32f2f; font-weight: bold; margin-top: auto; border-top: 2px solid #b8b6b6;">🚪 Sair</a>
         </div>
         
         <div class="content">
@@ -83,6 +85,10 @@ $tutores = json_decode($tutoresLista, true);
                         <th>CPF</th>
                         <th>Telefone</th>
                         <th>Endereço</th>
+                        <th>Email</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -93,6 +99,24 @@ $tutores = json_decode($tutoresLista, true);
                             <td><?php echo $tutor['cpf']; ?></td>
                             <td><?php echo $tutor['telefone']; ?></td>
                             <td><?php echo $tutor['endereco']; ?></td>
+                            <?php
+                                foreach ($usuarios as $usuario){
+                                    if($tutor['usuario_id'] == $usuario['id']){
+
+                            ?>
+                                        <td><?=$usuario['email'];?></td>
+                                        <td style="font-weight: bold; color: <?=$usuario['tipo'] == 'cliente' ? '#f57c00':'#4CAF50';?>;"><?=$usuario['tipo'];?></td>
+                                        <td>
+                                            <a href="mudar-tipo.php?id=<?=$usuario['id'];?>" 
+                                                onclick="return confirm('Deseja alterar o tipo deste usúario?');"
+                                                style="padding: 5px; color: #ffffff;text-decoration: none; font-weight: bold; background-color: <?=$usuario['tipo'] != 'cliente' ? '#f57c00':'#4CAF50';?>; border-radius: 5px;">
+                                                <?=$usuario['tipo'] == 'cliente' ? "Tornar Admin": "Tornar Cliente";?>
+                                            </a>
+                                        </td>
+                            <?php
+                                    }
+                                }
+                            ?>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

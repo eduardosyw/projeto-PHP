@@ -54,14 +54,12 @@ if (isset($_POST['logar'])) {
     if (file_exists($arquivo)) {
         $usuarios = json_decode(file_get_contents($arquivo), true);
         $acesso = false;
-        $userAdmin = false;
         foreach ($usuarios as $usuario) {
             if ($usuario["email"] == $email && $usuario['senha'] == $senha) {
                 $acesso = true;
                 session_start();
                 $_SESSION['usuario_id'] = $usuario['id'];
                 if($usuario["tipo"] == "admin") {
-                    $userAdmin = true;
                     $_SESSION['tipo'] = $usuario['tipo'];
                 }
                 break;
@@ -69,10 +67,8 @@ if (isset($_POST['logar'])) {
         }
         if (!$acesso) {
             header('location: ./?pg=form-login&msg=erroLogar');
-        } elseif(!$userAdmin) {
-            header('Location: ../');
         } else {
-            header('Location: ../admin/');
+            header('Location: ../');
         }
     } else {
         header("Location: ./?pg=form-login&msg=erroLogar");

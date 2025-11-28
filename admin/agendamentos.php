@@ -121,7 +121,7 @@ $agendamentos = json_decode($agendamentosLista, true);
         <div class="left-menu">
             <a href="index.php" style="padding: 15px 20px; text-decoration: none; color: #333;">Clientes</a>
             <a href="agendamentos.php" style="font-weight: bold; background-color: #b8b6b6; padding: 15px 20px; text-decoration: none; color: #333;">Agendamentos</a>
-            <a href="../config/logout.php" style="padding: 15px 20px; text-decoration: none; color: #d32f2f; font-weight: bold; margin-top: auto; border-top: 2px solid #b8b6b6;">🚪 Sair</a>
+            <a href="../" style="padding: 15px 20px; text-decoration: none; color: #d32f2f; font-weight: bold; margin-top: auto; border-top: 2px solid #b8b6b6;">🚪 Sair</a>
         </div>
         
         <div class="content">

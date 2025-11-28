@@ -118,7 +118,7 @@ main {
     color: #666;
 }
 
-.hero-content .button {
+.hero-content .button, .button-dados, #botaoAdmin{
     padding: 12px 24px;
     font-size: 1rem;
     cursor: pointer;
@@ -132,7 +132,7 @@ main {
     box-shadow: 0 4px 12px rgba(255, 179, 102, 0.4);
 }
 
-.hero-content .button:hover {
+.hero-content .button:hover, .button-dados:hover, #botaoAdmin:hover{
     background: linear-gradient(135deg, #FF9F4D 0%, #FFB366 100%);
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(255, 159, 77, 0.5);
@@ -577,4 +577,10 @@ footer p {
 .main-login .sucesso-message {
     max-width: 700px;
     margin: 0 auto 20px;
+}
+
+#botaoAdmin {
+    position: fixed;
+    right: 85%;
+    top: 90%;
 }

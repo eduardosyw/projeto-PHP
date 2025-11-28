@@ -30,5 +30,29 @@
         "cpf": "55555555555",
         "telefone": "8392114573",
         "endereco": "Rua jose"
+    },
+    {
+        "id": 5,
+        "usuario_id": 12,
+        "nome": "Junior Santos",
+        "cpf": "55544466658",
+        "telefone": "8392114573",
+        "endereco": "Avenida Eduardo Lima, 777"
+    },
+    {
+        "id": 6,
+        "usuario_id": 1,
+        "nome": "Renan Araujo",
+        "cpf": "11122233345",
+        "telefone": "69988776655",
+        "endereco": "Rua Pe"
+    },
+    {
+        "id": 7,
+        "usuario_id": 2,
+        "nome": "Alan",
+        "cpf": "11122233345",
+        "telefone": "69988776655",
+        "endereco": "Rua 456"
     }
 ]

@@ -47,7 +47,7 @@ include_once 'header.php';
                     </div>
                     <div class="card-footer" style="justify-content: center; margin-top: 20px;">
                         <button onclick="window.location.href='tutores-editar-form.php?id=<?= $meu_tutor['id'] ?>'"
-                            class="button">Editar Meus Dados</button>
+                            class="button-dados">Editar Meus Dados</button>
                     </div>
                 </div>
             <?php else: ?>
