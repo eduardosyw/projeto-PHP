@@ -32,7 +32,3 @@
             </nav>
         </div>
     </header>
-
-<?php if ($_SESSION['tipo'] == 'admin') { ?>
-    <a href="<?=$base_path;?>admin/" id="botaoAdmin">Painel Administrativo</a>
-<?php } ?>

@@ -539,6 +539,7 @@ footer {
     padding: 20px;
     margin-top: auto;
     box-shadow: 0 -2px 8px rgba(230, 126, 34, 0.3);
+    position: relative;
 }
 
 footer p {
@@ -580,7 +581,8 @@ footer p {
 }
 
 #botaoAdmin {
-    position: fixed;
+    position: absolute;
     left: 20px;
-    bottom: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }

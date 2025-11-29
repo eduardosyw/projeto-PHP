@@ -53,7 +53,7 @@ include_once 'header.php';
 
                 <div class="form-actions">
                     <input type="submit" value="Salvar Alterações" class="button">
-                    <a href="tutores-lista.php" class="button-secondary">Cancelar</a>
+                    <a href="dados.php" class="button-secondary">Cancelar</a>
                 </div>
             </form>
         </div>
