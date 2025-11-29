@@ -3,7 +3,7 @@
         "id": 1,
         "usuario_id": 1,
         "pet_nome": "Mimi",
-        "servico": "Consulta Veterinária",
+        "servico": "Consulta Veterin\u00e1ria",
         "data": "2025-11-22",
         "horario": "10:30",
         "status": "Confirmado"
@@ -48,7 +48,7 @@
         "id": 9,
         "usuario_id": 2,
         "pet_nome": "Toy",
-        "servico": "Vacinação",
+        "servico": "Vacina\u00e7\u00e3o",
         "data": "2025-11-07",
         "horario": "12:32",
         "status": "Pendente"
@@ -57,7 +57,7 @@
         "id": 10,
         "usuario_id": 4,
         "pet_nome": "Rex",
-        "servico": "Consulta Veterinária",
+        "servico": "Consulta Veterin\u00e1ria",
         "data": "2025-11-25",
         "horario": "15:00",
         "status": "Pendente"
@@ -65,8 +65,8 @@
     {
         "id": 11,
         "usuario_id": 3,
-        "pet_nome": "Azulão",
-        "servico": "Consulta Veterinária",
+        "pet_nome": "Azul\u00e3o",
+        "servico": "Consulta Veterin\u00e1ria",
         "data": "2025-11-28",
         "horario": "17:00",
         "status": "Pendente"
@@ -74,7 +74,7 @@
     {
         "id": 12,
         "usuario_id": 3,
-        "pet_nome": "Azulão",
+        "pet_nome": "Azul\u00e3o",
         "servico": "Banho e Tosa",
         "data": "2025-11-24",
         "horario": "22:00",
@@ -84,7 +84,7 @@
         "id": 13,
         "usuario_id": 5,
         "pet_nome": "Cachorro1",
-        "servico": "Consulta Veterinária",
+        "servico": "Consulta Veterin\u00e1ria",
         "data": "2025-11-13",
         "horario": "22:10",
         "status": "Pendente"
@@ -93,7 +93,7 @@
         "id": 14,
         "usuario_id": 10,
         "pet_nome": "Rex",
-        "servico": "Consulta Veterinária",
+        "servico": "Consulta Veterin\u00e1ria",
         "data": "2025-12-01",
         "horario": "15:00",
         "status": "Pendente"

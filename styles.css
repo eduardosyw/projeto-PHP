@@ -1,5 +1,37 @@
 /* ========================================
-   RESET E CONFIGURAÇÕES GLOBAIS
+   VARIÁVEIS & CONFIGURAÇÕES GLOBAIS
+   ======================================== */
+:root {
+    /* Paleta de Cores - Mantendo o tom laranja mas refinando */
+    --primary-color: #E67E22;
+    --primary-hover: #D35400;
+    --secondary-color: #2C3E50;
+    --background-color: #FDFBF7; /* Off-white mais suave */
+    --surface-color: #FFFFFF;
+    --text-color: #333333;
+    --text-light: #666666;
+    --border-color: #E0E0E0;
+    --success-color: #27AE60;
+    --danger-color: #C0392B;
+    --warning-color: #F39C12;
+
+    /* Espaçamento */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 40px;
+
+    /* Bordas e Sombras */
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --box-shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Transições */
+    --transition-speed: 0.3s;
+}
+
+/* ========================================
+   RESET
    ======================================== */
 * {
     margin: 0;
@@ -7,209 +39,265 @@
     box-sizing: border-box;
 }
 
-/* ========================================
-   TIPOGRAFIA E ELEMENTOS GLOBAIS
-   ======================================== */
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #FFFAF5;
-}
-
-ul {
-    list-style-type: none;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: color var(--transition-speed);
+}
+
+ul {
+    list-style: none;
 }
 
 img {
     max-width: 100%;
     display: block;
+    height: auto;
+}
+
+/* ========================================
+   LAYOUT PRINCIPAL
+   ======================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    padding: var(--spacing-xl) 0;
 }
 
 /* ========================================
    HEADER
    ======================================== */
 header {
+    background-color: var(--surface-color);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container { /* Assumindo que o header tem um container interno ou aplicando direto */
+    display: flex; /* Se o HTML não tiver container, o header vira flex container */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ajuste para estrutura atual do header.php que usa divs diretas */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    width: 100%;
-    background: linear-gradient(135deg, #FFB366 0%, #FFC77D 100%);
-    box-shadow: 0 2px 8px rgba(255, 179, 102, 0.3);
+    padding: var(--spacing-md) var(--spacing-xl); /* Padding lateral maior */
 }
 
 .esquerda a {
     font-size: 1.5rem;
-    font-weight: 900;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
 }
 
-.direita ul {
+.direita nav ul {
     display: flex;
-    flex-direction: row;
-    gap: 15px;
+    gap: var(--spacing-lg);
+    align-items: center;
 }
 
 .direita a {
-    color: white;
-    font-weight: 700;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    position: relative;
 }
 
 .direita a:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
+    color: var(--primary-color);
 }
 
-/* ========================================
-   MAIN
-   ======================================== */
-main {
-    flex: 1;
+/* Efeito de sublinhado animado no menu */
+.direita a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed);
+}
+
+.direita a:hover::after {
     width: 100%;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Hero Section */
+/* ========================================
+   HERO SECTION
+   ======================================== */
 .hero {
-    padding: 40px 0;
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, #FFF5E6 0%, #FFFFFF 100%);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .hero .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: var(--spacing-xl);
+    flex-wrap: wrap; /* Responsividade */
 }
 
 .hero-content {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    min-width: 300px;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
-    color: #E67E22;
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    color: #666;
-}
-
-.hero-content .button, .button-dados, #botaoAdmin{
-    padding: 12px 24px;
-    font-size: 1rem;
-    cursor: pointer;
-    align-self: flex-start;
-    background: linear-gradient(135deg, #FFB366 0%, #FFC77D 100%);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(255, 179, 102, 0.4);
-}
-
-.hero-content .button:hover, .button-dados:hover, #botaoAdmin:hover{
-    background: linear-gradient(135deg, #FF9F4D 0%, #FFB366 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(255, 159, 77, 0.5);
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
 }
 
 .hero-image {
     flex: 1;
+    min-width: 300px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 300px;
-    background-color: #e0e0e0;
-    border: 2px dashed #999;
-    border-radius: 8px;
 }
 
 .hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-hover);
 }
 
-/* Info Section - Cards */
+/* ========================================
+   COMPONENTES: BOTÕES
+   ======================================== */
+.button, .button-dados, #botaoAdmin, .btn-editar, .btn-excluir, .button-secondary, .button-danger {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-speed);
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Botão Primário (Laranja) */
+.button, .button-dados, #botaoAdmin {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.button:hover, .button-dados:hover, #botaoAdmin:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(230, 126, 34, 0.3);
+}
+
+/* Botão Secundário (Cinza) */
+.button-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.button-secondary:hover {
+    background-color: #7f8c8d;
+    transform: translateY(-2px);
+}
+
+/* Botão Perigo (Vermelho) */
+.button-danger, .btn-excluir {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.button-danger:hover, .btn-excluir:hover {
+    background-color: #a93226;
+    transform: translateY(-2px);
+}
+
+/* Botão Editar (Azul/Verde ou Laranja suave) */
+.btn-editar {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   CARDS & INFO SECTION
+   ======================================== */
 .info {
-    padding: 40px 0;
-    background: linear-gradient(180deg, #FFFAF5 0%, #FFE8D1 100%);
+    padding: var(--spacing-xl) 0;
 }
 
 .info h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: var(--spacing-xl);
+    color: var(--secondary-color);
     font-size: 2rem;
-    color: #E67E22;
 }
 
 .info__cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    flex: 0 1 calc(25% - 20px);
-    min-width: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
 }
 
 .card figure {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: white;
-    border: 3px solid #FFC77D;
-    border-radius: 12px;
-    padding: 10px;
-    transition: all 0.3s ease;
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    height: 100%;
+    border: 1px solid var(--border-color);
 }
 
 .card figure:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(255, 179, 102, 0.3);
-    border-color: #FFB366;
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
-    background-color: #FFFAF5;
 }
 
 .card figcaption {
+    padding: var(--spacing-md);
     text-align: center;
-    font-size: 1rem;
-    color: #E67E22;
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--secondary-color);
 }
 
 /* ========================================
@@ -218,371 +306,217 @@ main {
 .agendamentos-lista {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
 }
 
 .agendamento-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.agendamento-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-header {
-    background: linear-gradient(135deg, #FFC77D 0%, #FFD699 100%);
-    padding: 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--spacing-md);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #FFB366;
 }
 
 .card-header h3 {
+    font-size: 1.1rem;
     margin: 0;
-    font-size: 1.3rem;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-weight: 700;
 }
 
 .status {
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.status-confirmado {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.status-pendente {
-    background-color: #FFA726;
-    color: white;
-}
-
-.status-cancelado {
-    background-color: #EF5350;
-    color: white;
-}
+.status-confirmado { background-color: var(--success-color); }
+.status-pendente { background-color: var(--warning-color); color: #fff; }
+.status-cancelado { background-color: var(--danger-color); }
 
 .card-body {
-    padding: 15px;
+    padding: var(--spacing-md);
 }
 
 .card-body p {
-    margin: 8px 0;
-    color: #666;
-    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-light);
 }
 
 .card-body strong {
-    color: #333;
+    color: var(--text-color);
 }
 
 .card-footer {
-    padding: 15px;
-    background-color: #FFFAF5;
+    padding: var(--spacing-md);
+    background-color: #f8f9fa;
+    border-top: 1px solid var(--border-color);
     display: flex;
-    gap: 10px;
-    border-top: 1px solid #FFE8D1;
-}
-
-.btn-editar,
-.btn-excluir {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.btn-editar {
-    background: linear-gradient(135deg, #FFC77D 0%, #FFD699 100%);
-    color: white;
-    box-shadow: 0 2px 8px rgba(255, 199, 125, 0.4);
-}
-
-.btn-editar:hover {
-    background: linear-gradient(135deg, #FFB366 0%, #FFC77D 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 179, 102, 0.5);
-}
-
-.btn-excluir {
-    background: linear-gradient(135deg, #EF5350 0%, #F44336 100%);
-    color: white;
-    box-shadow: 0 2px 8px rgba(239, 83, 80, 0.4);
-}
-
-.btn-excluir:hover {
-    background: linear-gradient(135deg, #E53935 0%, #EF5350 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.5);
+    gap: var(--spacing-sm);
 }
 
 /* ========================================
-   DEMO LOGIN BOX
+   FORMS
    ======================================== */
-.demo-login-box {
-    margin-top: 20px;
-    padding: 15px;
-    background: linear-gradient(135deg, #FFF4E6 0%, #FFE4C4 100%);
-    border-radius: 8px;
-    border: 2px solid #FFC77D;
-}
-
-.demo-status {
-    margin: 0 0 10px 0;
-    color: #E67E22;
-    font-weight: bold;
-}
-
-.demo-form {
-    display: inline;
-}
-
-.demo-info {
-    margin: 10px 0 0 0;
-    font-size: 0.85rem;
-    color: #E67E22;
-}
-
-.button-small {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-}
-
-.empty-message {
-    text-align: center;
-    color: #FFB366;
-    padding: 40px;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-/* 
-
-    CRIAR AGENDAMENTO
-
-*/
-
-.form-agendamento {
-    max-width: 700px;
-    margin: 0 auto;
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(255, 154, 60, 0.2);
-    border: 2px solid #FFE8D6;
+.form-agendamento, .agendamento-details, .demo-login-box {
+    background: var(--surface-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid var(--border-color);
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: var(--spacing-md);
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #E67E22;
-    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    color: var(--secondary-color);
 }
 
-.form-group input,
-.form-group select {
+.form-group input, .form-group select {
     width: 100%;
-    padding: 14px 16px;
-    border: 2px solid #FFE8D1;
-    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
     font-size: 1rem;
-    transition: all 0.3s ease;
-    font-family: Arial, sans-serif;
-    background-color: #FFFAF5;
+    transition: border-color var(--transition-speed);
 }
 
-.form-group input:focus,
-.form-group select:focus {
+.form-group input:focus, .form-group select:focus {
     outline: none;
-    border-color: #FFB366;
-    box-shadow: 0 0 0 3px rgba(255, 179, 102, 0.15);
-    background-color: white;
-}
-
-.form-group select {
-    cursor: pointer;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
 }
 
 .form-actions {
     display: flex;
-    gap: 15px;
-    margin-top: 35px;
-}
-
-.form-actions .button,
-.form-actions .button-secondary {
-    flex: 1;
-    text-align: center;
-    padding: 14px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
 }
 
 .form-actions .button {
-    background: linear-gradient(135deg, #FFB366 0%, #FFC77D 100%);
-    color: white;
-    box-shadow: 0 4px 12px rgba(255, 179, 102, 0.4);
-}
-
-.form-actions .button:hover {
-    background: linear-gradient(135deg, #FF9F4D 0%, #FFB366 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(255, 159, 77, 0.5);
-}
-
-.button-secondary {
-    background-color: #9E9E9E;
-    color: white;
-    box-shadow: 0 4px 12px rgba(158, 158, 158, 0.3);
-}
-
-.button-secondary:hover {
-    background-color: #757575;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(117, 117, 117, 0.4);
-}
-
-.sucesso-message {
-    background: linear-gradient(135deg, #D4EDDA 0%, #C3E6CB 100%);
-    color: #155724;
-    padding: 15px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border: 2px solid #4CAF50;
-    font-weight: bold;
-}
-
-/* ========================================
-   DELETAR AGENDAMENTO
-   ======================================== */
-.delete-confirmation {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.agendamento-details {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(255, 179, 102, 0.2);
-    border: 2px solid #FFE8D1;
-    margin-bottom: 30px;
-}
-
-.agendamento-details h3 {
-    color: #E67E22;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-}
-
-.agendamento-details p {
-    margin: 12px 0;
-    font-size: 1rem;
-    color: #666;
-}
-
-.agendamento-details strong {
-    color: #333;
-}
-
-.delete-form {
-    text-align: center;
-}
-
-.button-danger {
-    background: linear-gradient(135deg, #EF5350 0%, #F44336 100%);
-    color: white;
-    box-shadow: 0 4px 12px rgba(239, 83, 80, 0.4);
-}
-
-.button-danger:hover {
-    background: linear-gradient(135deg, #E53935 0%, #EF5350 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(229, 57, 53, 0.5);
-}
-
-/* ========================================
-   FOOTER
-   ======================================== */
-footer {
     width: 100%;
-    background: linear-gradient(135deg, #E67E22 0%, #FFB366 100%);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-    box-shadow: 0 -2px 8px rgba(230, 126, 34, 0.3);
-    position: relative;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-weight: 600;
 }
 
 /* ========================================
-   FOOTER
+   LOGIN & UTILS
    ======================================== */
-
-
-/* ======================================== 
-    LOGIN
-   ======================================== */
-
-.link-login {
-    padding: 5px;
-    color: #E67E22;
-    font-size: 1.2rem;
-}
-.link-login:hover {
-    text-decoration: underline;
-}
-
-.main-login > .info{
-    /* height: 100vh; Removed to fit with header/footer */
+.main-login {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 60vh;
 }
 
-.main-login .sucesso-message {
-    max-width: 700px;
-    margin: 0 auto 20px;
+.sucesso-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: 1px solid #c3e6cb;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
 }
 
+.empty-message {
+    text-align: center;
+    color: var(--text-light);
+    padding: var(--spacing-xl);
+    font-style: italic;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    position: relative; /* Importante para o botão admin */
+    margin-top: auto;
+}
+
+footer p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Botão Admin no Footer - Requisito do Usuário */
 #botaoAdmin {
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
+    /* Ajustes específicos para o botão no footer */
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+}
+
+#botaoAdmin:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-50%); /* Mantém o centro vertical */
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+
+    .direita nav ul {
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content .button {
+        align-self: center; /* Centraliza botão no mobile */
+    }
+
+    /* Ajuste do botão admin no mobile para não sobrepor texto */
+    footer {
+        padding-bottom: 60px; /* Espaço para o botão */
+    }
+
+    #botaoAdmin {
+        left: 50%;
+        top: auto;
+        bottom: 15px;
+        transform: translateX(-50%);
+        width: max-content;
+    }
 }
