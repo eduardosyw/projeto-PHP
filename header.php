@@ -19,15 +19,12 @@
                     <li><a href="<?php echo $base_path ?? ''; ?>agendamentos/agendamento.php">Agendamentos</a></li>
                     <li><a href="<?= $base_path; ?>quemsomos.php">Quem Somos</a></li>
                     <li><a href="<?= $base_path; ?>contato.php">Contato</a></li>
-                    <li>
-                        <?php if (empty($_SESSION['usuario_id'])) { ?>
-                            <a href="<?= $base_path; ?>login/">Login</a>
-                        <?php } else { ?>
-                            <a href="<?= $base_path; ?>dados.php">Meus Dados</a>
-                            <a href="<?= $base_path; ?>login/logout.php">Sair</a>
-                        <?php } ?>
-
-                    </li>
+                    <?php if (empty($_SESSION['usuario_id'])) { ?>
+                        <li><a href="<?= $base_path; ?>login/">Login</a></li>
+                    <?php } else { ?>
+                        <li><a href="<?= $base_path; ?>dados.php">Meus Dados</a></li>
+                        <li><a href="<?= $base_path; ?>login/logout.php">Sair</a></li>
+                    <?php } ?>
                 </ul>
             </nav>
         </div>

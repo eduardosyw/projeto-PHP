@@ -10,13 +10,13 @@ include_once 'header.php';
             <div class="hero-content">
                 <h1 id="hero-title">Bem-vindo ao Pet Club</h1>
                 <p id="hero-text">Mantenha seu pet feliz e saudável!</p>
-                <?php if (empty($_SESSION['usuario_id'])) { ?><button class="button"
-                        onclick="window.location.href='login/?pg=form-cadastro'">Cadastre-se</button> <?php } ?>
-
-                <div>
-                    <button class="button" onclick="window.location.href='agendamentos/agendamento.php'"> Meus
-                        agendamentos</button>
-                </div>
+                <?php if (empty($_SESSION['usuario_id'])) { ?>
+                    <button class="button" onclick="window.location.href='login/?pg=form-cadastro'">Cadastre-se</button>
+                <?php } else { ?>
+                    <div>
+                        <button class="button" onclick="window.location.href='agendamentos/agendamento.php'"> Meus agendamentos</button>
+                    </div>
+                <?php } ?>
             </div>
             <div class="hero-image">
                 <img src="https://media.istockphoto.com/id/1445781293/pt/foto/cat-and-dog-looking-at-the-camera-in-front-of-food-shelves-in-a-pet-store-the-background-is.jpg?s=612x612&w=0&k=20&c=Suw7Y87mi0vmGN_Ou8PWQLI0nE3mc-Yl6ASAvhv4Wrs="

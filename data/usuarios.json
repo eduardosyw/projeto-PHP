@@ -70,5 +70,11 @@
         "email": "junior@gmail.com",
         "senha": "123",
         "tipo": "cliente"
+    },
+    {
+        "id": 13,
+        "email": "luiz@gmail.com",
+        "senha": "123",
+        "tipo": "cliente"
     }
 ]

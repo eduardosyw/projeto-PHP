@@ -45,7 +45,7 @@
         "nome": "Renan Araujo",
         "cpf": "11122233345",
         "telefone": "69988776655",
-        "endereco": "Rua Pe"
+        "endereco": "Rua Pereira, 759"
     },
     {
         "id": 7,
@@ -54,5 +54,13 @@
         "cpf": "11122233345",
         "telefone": "69988776655",
         "endereco": "Rua 456"
+    },
+    {
+        "id": 8,
+        "usuario_id": 13,
+        "nome": "Luiz Silva",
+        "cpf": "55544466659",
+        "telefone": "58945123578",
+        "endereco": "Rua Silva, 789"
     }
 ]
