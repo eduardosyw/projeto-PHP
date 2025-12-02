@@ -5,7 +5,7 @@
             <?php include_once 'msg.php'; ?>
             <form action="acoes-usuarios.php" method="POST" class="form-agendamento">
              <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">E-mail</label>
                     <input type="email" name="email" required>
                 </div>
                 <div class="form-group">

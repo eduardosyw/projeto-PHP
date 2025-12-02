@@ -62,5 +62,13 @@
         "cpf": "55544466659",
         "telefone": "58945123578",
         "endereco": "Rua Silva, 789"
+    },
+    {
+        "id": 9,
+        "usuario_id": 14,
+        "nome": "Felipe",
+        "cpf": "55544466658",
+        "telefone": "77953261545",
+        "endereco": "Rua Raimundo 456"
     }
 ]

@@ -2,7 +2,7 @@
     {
         "id": 1,
         "email": "renan@gmail.com",
-        "senha": "123",
+        "senha": "0000",
         "tipo": "admin"
     },
     {
@@ -68,12 +68,18 @@
     {
         "id": 12,
         "email": "junior@gmail.com",
-        "senha": "123",
+        "senha": "1234",
         "tipo": "cliente"
     },
     {
         "id": 13,
         "email": "luiz@gmail.com",
+        "senha": "123",
+        "tipo": "cliente"
+    },
+    {
+        "id": 14,
+        "email": "felipe@gmail.com",
         "senha": "123",
         "tipo": "cliente"
     }

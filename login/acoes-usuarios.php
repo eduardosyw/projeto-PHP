@@ -42,8 +42,10 @@ if (isset($_POST['criar'])) {
         session_start();
         $_SESSION['usuario_id'] = $id;
         header('location: ../tutores-cadastro-form.php');
+        exit;
     } else {
         header('Location: ./?pg=form-cadastro&msg=erro');
+        exit;
     }
 }
 if (isset($_POST['logar'])) {
@@ -67,10 +69,48 @@ if (isset($_POST['logar'])) {
         }
         if (!$acesso) {
             header('location: ./?pg=form-login&msg=erroLogar');
+            exit;
         } else {
             header('Location: ../');
+            exit;
         }
     } else {
         header("Location: ./?pg=form-login&msg=erroLogar");
+        exit;
+    }
+}
+if (isset($_POST['alterarSenha'])){
+    session_start();
+    if(isset($_SESSION['usuario_id'])){
+        if($_POST['senhaNova'] == $_POST['senhaNovaConfirm']) {
+            $alterar = false;
+            $arquivo = '../data/usuarios.json';
+            $usuarios = json_decode(file_get_contents($arquivo), true);
+            foreach($usuarios as $key => $usuario) {
+                if($usuario['id'] == $_SESSION['usuario_id'] && $usuario['senha'] == $_POST['senhaAtual']) {
+                    $usuarios[$key]['senha'] = $_POST['senhaNova'];
+                    $alterar = true;
+                    break;
+                }
+            }
+            if(!$alterar) {
+                header('Location: ./?pg=form-alterarSenha&msg=senhaInvalida');
+            } else {
+                if(file_put_contents($arquivo, json_encode($usuarios, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE))) {
+                    header('Location: ../dados.php');
+                    exit;
+                } else {
+                    header('Location: ./?pg=form-alterarSenha&msg=erro');
+                    exit;
+                }
+            }
+
+        } else {
+            header('Location: ./?pg=form-alterarSenha&msg=senhaInvalida');
+            exit;
+        }
+    } else {
+        header('Location: ../');
+        exit;
     }
 }

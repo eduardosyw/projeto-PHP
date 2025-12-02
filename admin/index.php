@@ -67,7 +67,7 @@ $usuarios = json_decode(file_get_contents('../data/usuarios.json'), true);
     
     <main>
         <div class="left-menu">
-            <a href="index.php" style="font-weight: bold; background-color: #b8b6b6; padding: 15px 20px; text-decoration: none; color: #333;">Clientes</a>
+            <a href="./" style="font-weight: bold; background-color: #b8b6b6; padding: 15px 20px; text-decoration: none; color: #333;">Clientes</a>
             <a href="agendamentos.php" style="padding: 15px 20px; text-decoration: none; color: #333;">Agendamentos</a>
             <a href="../" style="padding: 15px 20px; text-decoration: none; color: #d32f2f; font-weight: bold; margin-top: auto; border-top: 2px solid #b8b6b6;">🚪 Sair</a>
         </div>
@@ -108,7 +108,7 @@ $usuarios = json_decode(file_get_contents('../data/usuarios.json'), true);
                                         <td style="font-weight: bold; color: <?=$usuario['tipo'] == 'cliente' ? '#f57c00':'#4CAF50';?>;"><?=$usuario['tipo'];?></td>
                                         <td>
                                             <a href="mudar-tipo.php?id=<?=$usuario['id'];?>" 
-                                                onclick="return confirm('Deseja alterar o tipo deste usúario?');"
+                                                onclick="return confirm('Deseja alterar o tipo deste usuário?');"
                                                 style="padding: 5px; color: #ffffff;text-decoration: none; font-weight: bold; background-color: <?=$usuario['tipo'] != 'cliente' ? '#f57c00':'#4CAF50';?>; border-radius: 5px;">
                                                 <?=$usuario['tipo'] == 'cliente' ? "Tornar Admin": "Tornar Cliente";?>
                                             </a>

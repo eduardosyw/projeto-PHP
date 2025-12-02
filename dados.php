@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario_id'])) {
-    header('Location: login/?pg=form-login');
+    header('Location: login/');
     exit;
 }
 
@@ -48,6 +48,7 @@ include_once 'header.php';
                     <div class="card-footer" style="justify-content: center; margin-top: 20px;">
                         <button onclick="window.location.href='tutores-editar-form.php?id=<?= $meu_tutor['id'] ?>'"
                             class="button-dados">Editar Meus Dados</button>
+                        <button onclick="window.location.href='./login/?pg=form-alterarSenha'" class="button-dados">Alterar Senha</button>
                     </div>
                 </div>
             <?php else: ?>
