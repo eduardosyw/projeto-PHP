@@ -36,15 +36,6 @@
         "status": "Confirmado"
     },
     {
-        "id": 9,
-        "usuario_id": 2,
-        "pet_nome": "Toy",
-        "servico": "Vacinação",
-        "data": "2025-11-07",
-        "horario": "12:32",
-        "status": "Pendente"
-    },
-    {
         "id": 10,
         "usuario_id": 4,
         "pet_nome": "Rex",
@@ -99,15 +90,6 @@
         "status": "Pendente"
     },
     {
-        "id": 16,
-        "usuario_id": 1,
-        "pet_nome": "Caramelo",
-        "servico": "Consulta Veterinária",
-        "data": "2025-12-10",
-        "horario": "11:00",
-        "status": "Pendente"
-    },
-    {
         "id": 17,
         "usuario_id": 13,
         "pet_nome": "Loro",
@@ -115,5 +97,23 @@
         "data": "2025-12-20",
         "horario": "14:00",
         "status": "Pendente"
+    },
+    {
+        "id": 18,
+        "usuario_id": 15,
+        "pet_nome": "Mel",
+        "servico": "Banho e Tosa",
+        "data": "2025-12-10",
+        "horario": "14:00",
+        "status": "Confirmado"
+    },
+    {
+        "id": 19,
+        "usuario_id": 1,
+        "pet_nome": "Caramelo",
+        "servico": "Vacinação",
+        "data": "2025-12-12",
+        "horario": "15:00",
+        "status": "Confirmado"
     }
 ]

@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['tipo']) && $_SESSION['tipo'] != 'admin'){
+    header('Location: ../');
+    exit;
+}
 $agendamentosLista = file_get_contents('../data/agendamentos.json');
 $agendamentos = json_decode($agendamentosLista, true);
 ?>

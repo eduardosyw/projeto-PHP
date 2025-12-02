@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['tipo']) && $_SESSION['tipo'] != 'admin'){
+    header('Location: ../');
+    exit;
+}
 if (!isset($_GET['id'])) {
     header('Location: agendamentos.php');
     exit;

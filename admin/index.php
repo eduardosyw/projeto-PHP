@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['tipo']) && $_SESSION['tipo'] != 'admin'){
+    header('Location: ../');
+    exit;
+}
 $tutoresLista = file_get_contents('../data/tutores.json');
 $tutores = json_decode($tutoresLista, true);
 
